@@ -16,6 +16,13 @@ header {
     text-align: center;
     padding: 12px;
 }
+a{
+    text-decoration: none;
+    color: #0fde20;
+}
+a:hover{
+    color: cyan;
+}
 
 h1 {
     margin: 0;
