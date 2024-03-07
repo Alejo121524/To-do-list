@@ -14,7 +14,12 @@ header {
 nav {
     text-align: center; 
 }
-
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:cyan;
+}
 
 h1 {
     background-color: blue;
