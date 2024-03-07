@@ -12,7 +12,7 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
 }
-}
+
 
 header {
     background-color: #1e1c1c; 
@@ -21,6 +21,12 @@ header {
 
 nav {
     text-align: center; 
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:cyan;
 }
 
 h1 {
@@ -32,10 +38,47 @@ h1 {
 
 main {
     padding: 20px;
+ position: relative;
 }
 
 img {
     width: 100%;
     height: auto; 
     border: 1px solid blue;
+    display: block;
+}
+h2, h3, p {
+    position: absolute;
+    color: white; /* Ajusta el color del texto según el contraste con la imagen */
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h2{
+    top: 13%;
+    left: 43%;
+}
+h2 img{
+    width: 15%;
+    display: block;
+    border: none;
+
+}
+
+h3 {
+    top: 40%;
+    font-size: 2em;
+ 
+}
+
+p {
+    top: 50%;
+    right: 1%;
+    left: 0.5%;
+    font-size: 1.0em;
+    color:rgb(253, 253, 253);
+   
 }
