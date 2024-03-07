@@ -14,23 +14,17 @@ header {
 nav {
     text-align: center; 
 }
-a{
-    text-decoration: none;
-}
-a:hover{
-    color:cyan;
-}
+
 
 h1 {
     background-color: blue;
     color: white; 
     padding: 10px; 
     margin: 0; 
+
 }
 
-main {
-    padding: 20px;
-    position: relative;
+
 }
 
 img {
@@ -52,4 +46,6 @@ h2 {
     left: 0.5%;
     font-size:larger;
    
+    border: 1px solid blue; 
+
 }

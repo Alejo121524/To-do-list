@@ -15,7 +15,11 @@ body {
 
 
 header {
-    background-color: #1e1c1c; 
+    background-color: #1e1c1c;
+}
+
+header {
+    background-color: #171616; 
     padding: 10px; 
 }
 
@@ -34,16 +38,29 @@ h1 {
     color: white; 
     padding: 10px; 
     margin: 0; 
+
 }
 
 main {
     padding: 20px;
  position: relative;
+    font-style: bold;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: cyan;
+}
+
+main {
+    padding: 20px; 
 }
 
 img {
     width: 100%;
     height: auto; 
+
     border: 1px solid blue;
     display: block;
 }
@@ -81,4 +98,7 @@ p {
     font-size: 1.0em;
     color:rgb(253, 253, 253);
    
+}
+
+    border: 1px solid blue; 
 }
