@@ -23,12 +23,6 @@ h1 {
     margin: 0; 
     font-style: bold;
 }
-a{
-    text-decoration: none;
-}
-a:hover{
-    color: cyan;
-}
 
 main {
     padding: 20px; 
