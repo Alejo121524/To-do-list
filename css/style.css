@@ -1,0 +1,33 @@
+/* style.css */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; 
+    padding: 10px; 
+}
+
+nav {
+    text-align: center; /* Alinear el texto en el centro */
+}
+
+h1 {
+    background-color: blue;
+    color: white; /* Color del texto en el encabezado */
+    padding: 10px; /* Espaciado interno en el encabezado */
+    margin: 0; /* Eliminar el margen predeterminado del h1 */
+}
+
+main {
+    padding: 20px; /* Espaciado interno en el contenido principal */
+}
+
+img {
+    width: 100%;
+    height: auto; /* Para mantener la proporción de aspecto de la imagen */
+    border: 1px solid white; /* Añadir un borde blanco alrededor de la imagen */
+}
