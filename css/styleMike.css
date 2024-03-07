@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #171616; 
+    padding: 10px; 
+}
+
+nav {
+    text-align: center; 
+}
+
+
+h1 {
+    background-color: blue;
+    color: white; 
+    padding: 10px; 
+    margin: 0; 
+    font-style: bold;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: cyan;
+}
+
+main {
+    padding: 20px; 
+}
+
+img {
+    width: 100%;
+    height: auto; 
+    border: 1px solid blue; 
+}
