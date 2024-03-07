@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #333; 
+    background-color: #1e1c1c; 
     padding: 10px; 
 }
 
@@ -21,15 +21,29 @@ h1 {
     color: white; 
     padding: 10px; 
     margin: 0; 
-    font-style: bold;
+
 }
 
-main {
-    padding: 20px; 
-}
 
 img {
     width: 100%;
     height: auto; 
-    border: 1px solid blue; 
+    border: 1px solid blue;
+    display: block;
+}
+h2 {
+    position: absolute;
+    color: white; 
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 50%;
+    right: 1%;
+    left: 0.5%;
+    font-size:larger;
+   
+
+
 }
