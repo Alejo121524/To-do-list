@@ -52,7 +52,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0 0 50% 50%;
-    background-color: #e9742c;
+    background-color: #ffff00;
     z-index: -1;
     transition: all 0.3s;
 }
