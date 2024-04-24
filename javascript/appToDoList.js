@@ -5,31 +5,31 @@ let categories = [
   },
   {
     title: "Trabajo",
-    img: "briefcase.png",
+    img: "maletin.png",
   },
   {
     title: "Compras",
-    img: "shopping.png",
+    img: "carrito-de-compra-anadir.png",
   },
   {
     title: "Código",
-    img: "web-design.png",
+    img: "mostrar-codigo.png",
   },
   {
     title: "Salud",
-    img: "healthcare.png",
+    img: "ver-fitness.png",
   },
   {
     title: "Fitness",
-    img: "dumbbell.png",
+    img: "musculo.png",
   },
   {
     title: "Educación",
-    img: "education.png",
+    img: "libro-marcador.png",
   },
   {
     title: "Finanzas",
-    img: "saving.png",
+    img: "hucha.png",
   },
 ];
 
@@ -82,6 +82,7 @@ let tasks = [
     category: "Finanzas",
     completed: false,
   },
+  /*
   {
     id: 9,
     task: "comprar cervezas para el fin de semana",
@@ -185,7 +186,7 @@ let tasks = [
     category: "Finanzas",
     completed: false,
   },
-  
+  */
 ];
 
 // Definir  las funciones
@@ -272,7 +273,7 @@ const renderTasks = () => {
       task.category.toLowerCase() === selectedCategory.title.toLowerCase()
   );
   if (categoryTasks.length === 0) {
-    tasksContainer.innerHTML = `<p class="no-tasks">No tasks added for this category</p>`;
+    tasksContainer.innerHTML = `<p class="no-tasks">No se agregaron tareas para esta categoría</p>`;
   } else {
     categoryTasks.forEach((task) => {
       const div = document.createElement("div");
