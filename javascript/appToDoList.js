@@ -271,7 +271,7 @@ const renderTasks = () => {
       task.category.toLowerCase() === selectedCategory.title.toLowerCase()
   );
   if (categoryTasks.length === 0) {
-    tasksContainer.innerHTML = `<p class="no-tasks">No tasks added for this category</p>`;
+    tasksContainer.innerHTML = `<p class="no-tasks">No hay tareas añadidas para esta categoría</p>`;
   } else {
     categoryTasks.forEach((task) => {
       const div = document.createElement("div");
