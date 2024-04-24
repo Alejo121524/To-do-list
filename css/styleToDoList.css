@@ -20,7 +20,7 @@ body {
     background-color: #000000;
 }
 
-.contenedor {
+.envoltura {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -30,7 +30,7 @@ body {
 }
 
 @media (min-width:768px) {
-    .contenedor {
+    .envoltura {
         height: 50rem;
         width: 25rem;
         border-radius: 40px;
@@ -38,7 +38,7 @@ body {
     }
 }
 
-.contenedor .pantalla {
+.envoltura .pantalla {
     min-width: 100%;
     flex: 1;
     transition: all 0.3s;
@@ -52,53 +52,53 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0 0 50% 50%;
-    background-color: #e9742c;
+    background-color: #ffff00;
     z-index: -1;
     transition: all 0.3s;
 }
 
-.contenedor.ver-categoria .inicio-pantalla {
+.envoltura.mostrar-categoría .pantalla-de-inicio {
     transform: translateX(-100%);
 }
 
-.contenedor.ver-categoria .categoria-pantalla {
+.envoltura.mostrar-categoría .pantalla-de-categoría {
     transform: translateX(-100%);
 }
 
-.contenedor.ver-categoria .fondo-de-pantalla {
+.envoltura.mostrar-categoría .fondo-de-pantalla {
     transform: translate(-50%, -60%)
 }
 
-.cabeza-contenedor {
+.cabezal-wrapper {
     padding: 0 30px;
 }
 
-.menu-btn {
+.btn-de-menú {
     width: 2rem;
     cursor: pointer;
     color: #ffffff;
 }
 
-.bienvenido {
+.bienvenida {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     color: #ffffff;
 }
 
-.bienvenido h1 {
+.bienvenida h1 {
     font-size: 1.5rem;
 }
 
-.bienvenido p {
+.bienvenida p {
     font-weight: 500;
 }
 
-.bienvenido .img {
+.bienvenida .img {
     position: relative;
 }
 
-.bienvenido .img .fondo {
+.bienvenida .img .fondo {
     position: absolute;
     top: 0;
     left: 50%;
@@ -110,11 +110,11 @@ body {
     z-index: -1;
 }
 
-.bienvenido .img img {
+.bienvenida .img img {
     width: 5rem;
 }
 
-.categorias-contenedor {
+.envoltura-de-categorías {
     margin-top: 1rem;
     padding: 0 30px;
     height: calc(100% - 8rem);
@@ -122,14 +122,14 @@ body {
     overflow: auto;
 }
 
-.categorias {
+.categorías {
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.categoria {
+.categoría {
     background: #fff;
     border-radius: 0.5rem;
     padding: 1.5rem 1rem;
@@ -141,67 +141,67 @@ body {
 
 }
 
-.categoria:hover {
+.categoría:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px 5px #00000040;
 }
 
-.categoria .left {
+.categoría .izquierda {
     display: flex;
     gap: 1.5rem;
     align-items: center;
 }
 
-.categoria .left img {
+.categoría .izquierda img {
     width: 3rem;
 }
 
-.categoria .contenido h1 {
+.categoría .contenido h1 {
     font-size: 1.5rem;
 }
 
-.categoria .contenido p {
+.categoría .contenido p {
     color: #2e2e2e;
     font-size: 0.8rem;
     opacity: 0.6;
 }
 
-.categoria .opciones {
+.categoría .opciones {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
 }
 
-.categoria:hover .opciones {
+.categoría:hover .opciones {
     opacity: 1;
     visibility: visible;
 }
 
-.categoria .alternar-btn {
+.categoría .botón-de-activación {
     width: 2rem;
     cursor: pointer;
     opacity: 0.6;
 }
 
-.categoria .alternar-btn:hover {
+.categoría .botón-de-activación:hover {
     opacity: 1;
 }
 
 
-/* Category Screen */
-.categoria-pantalla .cabeza-contenedor {
+/* Pantalla de categoría */
+.pantalla-de-categoría .cabezal-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.categoria-pantalla .cabeza-contenedor svg {
+.pantalla-de-categoría .cabezal-wrapper svg {
     width: 2rem;
     cursor: pointer;
     color: #fff;
 }
 
-.categoria-detalles {
+.detalles-de-categoría {
     padding: 0 30px;
     margin-top: 7rem;
     display: flex;
@@ -209,16 +209,16 @@ body {
     gap: 1rem;
 }
 
-.categoria-detalles img {
+.detalles-de-categoría img {
     width: 4rem;
 }
 
-.categoria-detalles .categoria-detalles p {
+.detalles-de-categoría .detalles p {
     opacity: 0.6;
 }
 
-/* tasks */
-.tareas-contenedor {
+/* tareas */
+.envoltura-de-tareas {
     padding: 0 30px;
     margin-top: 1rem;
     height: calc(100% - 12rem);
@@ -233,7 +233,7 @@ body {
     gap: 1rem;
 }
 
-.tareas-contenedor {
+.envoltura-de-tarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -241,7 +241,7 @@ body {
 
 
 
-.tareas {
+.tarea {
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -252,11 +252,11 @@ body {
 }
 
 
-.tarea entrada {
+.tarea input {
     display: none;
 }
 
-.tarea .marcado {
+.tarea .marca {
     width: 1rem;
     height: 1rem;
     border-radius: 2px;
@@ -266,36 +266,36 @@ body {
     align-items: center;
 }
 
-.tarea .marcado svg {
+.tarea .marca svg {
     width: 1rem;
     color: #2e2e2e;
     opacity: 0;
     transition: all 0.3s;
 }
 
-.tarea:hover .marcado svg {
+.tarea:hover .marca svg {
     opacity: 1;
 }
 
-.tarea .marcado svg path {
+.tarea .marca svg path {
     stroke-width: 3;
 }
 
-.tarea entrada:checked~.marcado {
+.tarea input:checked~.marca {
     background-color: #2e2e2e;
 }
 
-.tarea entrada:checked~.marcado svg {
+.tarea input:checked~.marca svg {
     opacity: 1;
     color: #fff;
 }
 
-.tarea entrada:checked~p {
+.tarea input:checked~p {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
-.tarea-contenedor .eliminar {
+.envoltura-de-tarea .eliminar {
     min-width: 2rem;
     height: 2rem;
     padding: 0.5rem;
@@ -308,25 +308,25 @@ body {
     transition: all 0.3s;
 }
 
-.tarea-contenedor:hover .eliminar {
+.envoltura-de-tarea:hover .eliminar {
     opacity: 1;
     visibility: visible;
 }
 
-.tarea-contenedor .eliminar:hover {
+.envoltura-de-tarea .eliminar:hover {
     color: red;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.no-tareas {
+.sin-tareas {
     margin-top: 5rem;
     text-align: center;
     font-size: 1.5rem;
     opacity: 0.6;
 }
 
-/* Add Task */
-.añadir-tarea-btn {
+/* Agregar Tarea */
+.btn-de-agregar-tarea {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
@@ -341,22 +341,22 @@ body {
     transition: all 0.3s;
 }
 
-.añadir-tarea-btn:hover {
+.btn-de-agregar-tarea:hover {
     transform: scale(1.1);
 }
 
-.añadir-tarea-btn.active {
+.btn-de-agregar-tarea.activo {
     z-index: 1;
     bottom: 20rem;
     transform: rotate(45deg);
 }
 
-.añadir-tarea-btn svg {
+.btn-de-agregar-tarea svg {
     width: 2rem;
     color: #fff;
 }
 
-.añadir-tarea {
+.agregar-tarea {
     position: absolute;
     bottom: -100%;
     left: 0;
@@ -365,28 +365,28 @@ body {
     transition: all 0.3s;
 }
 
-.añadir-tarea.active {
+.agregar-tarea.activo {
     bottom: 0;
 }
 
-.añadir-tarea .encabezado {
+.agregar-tarea .encabezado {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.entrada-grupo {
+.grupo-de-entrada {
     position: relative;
     margin-bottom: 20px;
 }
 
-.entrada-grupo entrada,
-.entrada-grupo label {
+.grupo-de-entrada input,
+.grupo-de-entrada label {
     display: block;
     width: 100%;
 }
 
-.entrada-grupo entrada,
-.entrada-grupo select {
+.grupo-de-entrada input,
+.grupo-de-entrada select {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -394,7 +394,7 @@ body {
     font-size: 16px;
 }
 
-.entrada-grupo label {
+.grupo-de-entrada label {
     width: max-content;
     padding: 0 5px;
     margin-top: 5px;
@@ -403,14 +403,14 @@ body {
     margin-bottom: 5px;
 }
 
-.btns {
+.botones {
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
     align-items: center;
 }
 
-.btns button {
+.botones button {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
@@ -421,12 +421,12 @@ body {
     z-index: 1;
 }
 
-button.añadir-btn {
+button.botón-agregar {
     background-color: #39a6f0;
     color: #fff
 }
 
-.añadir-tarea-fondo {
+.fondo-de-agregar-tarea {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -437,7 +437,7 @@ button.añadir-btn {
     background-color: #fff;
 }
 
-.negro-fondo {
+.fondo-negro {
     position: absolute;
     top: 0;
     left: 0;
@@ -450,7 +450,7 @@ button.añadir-btn {
     transition: all 0.3s;
 }
 
-.negro-fondo.active {
+.fondo-negro.activo {
     opacity: 1;
     visibility: visible;
 }

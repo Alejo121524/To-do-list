@@ -1,247 +1,247 @@
-let categories = [
+let categorías = [
     {
-      title: "Personal",
-      img: "boy.png",
+      título: "Personal",
+      img: "chico.png",
     },
     {
-      title: "Work",
-      img: "briefcase.png",
+      título: "Trabajo",
+      img: "maletín.png",
     },
     {
-      title: "Shopping",
-      img: "shopping.png",
+      título: "Compras",
+      img: "compras.png",
     },
     {
-      title: "Coding",
-      img: "web-design.png",
+      título: "Programación",
+      img: "diseño-web.png",
     },
     {
-      title: "Health",
-      img: "healthcare.png",
+      título: "Salud",
+      img: "cuidado-de-la-salud.png",
     },
     {
-      title: "Fitness",
-      img: "dumbbell.png",
+      título: "Fitness",
+      img: "mancuerna.png",
     },
     {
-      title: "Education",
-      img: "education.png",
+      título: "Educación",
+      img: "educación.png",
     },
     {
-      title: "Finance",
-      img: "saving.png",
+      título: "Finanzas",
+      img: "ahorro.png",
     },
   ];
   
-  let tasks = [
+  let tareas = [
     {
       id: 1,
-      task: "Go to market",
-      category: "Shopping",
-      completed: false,
+      tarea: "Ir al mercado",
+      categoría: "Compras",
+      completada: false,
     },
     {
       id: 2,
-      task: "Read a chapter of a book",
-      category: "Personal",
-      completed: false,
+      tarea: "Leer un capítulo de un libro",
+      categoría: "Personal",
+      completada: false,
     },
     {
       id: 3,
-      task: "Prepare presentation for meeting",
-      category: "Work",
-      completed: false,
+      tarea: "Preparar presentación para reunión",
+      categoría: "Trabajo",
+      completada: false,
     },
     {
       id: 4,
-      task: "Complete coding challenge",
-      category: "Coding",
-      completed: false,
+      tarea: "Completar desafío de programación",
+      categoría: "Programación",
+      completada: false,
     },
     {
       id: 5,
-      task: "Take a 30-minute walk",
-      category: "Health",
-      completed: false,
+      tarea: "Dar un paseo de 30 minutos",
+      categoría: "Salud",
+      completada: false,
     },
     {
       id: 6,
-      task: "Do a 20-minute HIIT workout",
-      category: "Fitness",
-      completed: false,
+      tarea: "Hacer un entrenamiento HIIT de 20 minutos",
+      categoría: "Fitness",
+      completada: false,
     },
     {
       id: 7,
-      task: "Watch an educational video online",
-      category: "Education",
-      completed: false,
+      tarea: "Ver un video educativo en línea",
+      categoría: "Educación",
+      completada: false,
     },
     {
       id: 8,
-      task: "Review monthly budget",
-      category: "Finance",
-      completed: false,
+      tarea: "Revisar presupuesto mensual",
+      categoría: "Finanzas",
+      completada: false,
     },
     {
       id: 9,
-      task: "Buy groceries for the week",
-      category: "Shopping",
-      completed: false,
+      tarea: "Comprar comestibles para la semana",
+      categoría: "Compras",
+      completada: false,
     },
     {
       id: 10,
-      task: "Write in a journal",
-      category: "Personal",
-      completed: false,
+      tarea: "Escribir en un diario",
+      categoría: "Personal",
+      completada: false,
     },
     {
       id: 11,
-      task: "Send follow-up emails",
-      category: "Work",
-      completed: false,
+      tarea: "Enviar correos electrónicos de seguimiento",
+      categoría: "Trabajo",
+      completada: false,
     },
     {
       id: 12,
-      task: "Work on a coding side project",
-      category: "Coding",
-      completed: false,
+      tarea: "Trabajar en un proyecto secundario de programación",
+      categoría: "Programación",
+      completada: false,
     },
     {
       id: 13,
-      task: "Try a new healthy recipe",
-      category: "Health",
-      completed: false,
+      tarea: "Probar una nueva receta saludable",
+      categoría: "Salud",
+      completada: false,
     },
     {
       id: 14,
-      task: "Attend a yoga class",
-      category: "Fitness",
-      completed: false,
+      tarea: "Asistir a una clase de yoga",
+      categoría: "Fitness",
+      completada: false,
     },
     {
       id: 15,
-      task: "Read an article about a new topic",
-      category: "Education",
-      completed: false,
+      tarea: "Leer un artículo sobre un nuevo tema",
+      categoría: "Educación",
+      completada: false,
     },
     {
       id: 16,
-      task: "Set up automatic bill payments",
-      category: "Finance",
-      completed: false,
+      tarea: "Configurar pagos de facturas automáticos",
+      categoría: "Finanzas",
+      completada: false,
     },
-    // Additional tasks for each category
+    // Tareas adicionales para cada categoría
     {
       id: 17,
-      task: "Buy new clothes",
-      category: "Shopping",
-      completed: false,
+      tarea: "Comprar ropa nueva",
+      categoría: "Compras",
+      completada: false,
     },
     {
       id: 18,
-      task: "Meditate for 10 minutes",
-      category: "Personal",
-      completed: false,
+      tarea: "Meditar durante 10 minutos",
+      categoría: "Personal",
+      completada: false,
     },
     {
       id: 19,
-      task: "Prepare agenda for team meeting",
-      category: "Work",
-      completed: false,
+      tarea: "Preparar agenda para reunión de equipo",
+      categoría: "Trabajo",
+      completada: false,
     },
     {
       id: 20,
-      task: "Debug a software issue",
-      category: "Coding",
-      completed: false,
+      tarea: "Depurar un problema de software",
+      categoría: "Programación",
+      completada: false,
     },
     {
       id: 21,
-      task: "Try a new recipe for lunch",
-      category: "Health",
-      completed: false,
+      tarea: "Probar una nueva receta para el almuerzo",
+      categoría: "Salud",
+      completada: false,
     },
     {
       id: 22,
-      task: "Go for a run",
-      category: "Fitness",
-      completed: false,
+      tarea: "Salir a correr",
+      categoría: "Fitness",
+      completada: false,
     },
     {
       id: 23,
-      task: "Learn a new language online",
-      category: "Education",
-      completed: false,
+      tarea: "Aprender un nuevo idioma en línea",
+      categoría: "Educación",
+      completada: false,
     },
     {
       id: 24,
-      task: "Read about history",
-      category: "Education",
-      completed: false,
+      tarea: "Leer sobre historia",
+      categoría: "Educación",
+      completada: false,
     },
     {
       id: 25,
-      task: "Review investment portfolio",
-      category: "Finance",
-      completed: false,
+      tarea: "Revisar cartera de inversiones",
+      categoría: "Finanzas",
+      completada: false,
     },
-    // Add more tasks for each category as desired
+    // Agregar más tareas para cada categoría según sea necesario
   ];
   
-  // Define functions
-  const saveLocal = () => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+  // Definir funciones
+  const guardarLocal = () => {
+    localStorage.setItem("tareas", JSON.stringify(tareas));
   };
   
-  const getLocal = () => {
-    const tasksLocal = JSON.parse(localStorage.getItem("tasks"));
-    if (tasksLocal) {
-      tasks = tasksLocal;
+  const obtenerLocal = () => {
+    const tareasLocal = JSON.parse(localStorage.getItem("tareas"));
+    if (tareasLocal) {
+      tareas = tareasLocal;
     }
   };
   
-  const toggleScreen = () => {
-    screenWrapper.classList.toggle("show-category");
+  const alternarPantalla = () => {
+    pantallaEnvoltura.classList.toggle("mostrar-categoría");
   };
   
-  const updateTotals = () => {
-    const categoryTasks = tasks.filter(
-      (task) =>
-        task.category.toLowerCase() === selectedCategory.title.toLowerCase()
+  const actualizarTotales = () => {
+    const tareasCategoría = tareas.filter(
+      (tarea) =>
+        tarea.categoría.toLowerCase() === categoríaSeleccionada.título.toLowerCase()
     );
-    numTasks.innerHTML = `${categoryTasks.length} Tasks`;
-    totalTasks.innerHTML = tasks.length;
+    numTareas.textContent = `${tareasCategoría.length} Tareas`;
+    totalTareas.textContent = tareas.length;
   };
   
-  const renderCategories = () => {
-    categoriesContainer.innerHTML = "";
-    categories.forEach((category) => {
-      const categoryTasks = tasks.filter(
-        (task) => task.category.toLowerCase() === category.title.toLowerCase()
+  const renderizarCategorías = () => {
+    contenedorCategorías.innerHTML = "";
+    categorías.forEach((categoría) => {
+      const tareasCategoría = tareas.filter(
+        (tarea) => tarea.categoría.toLowerCase() === categoría.título.toLowerCase()
       );
       const div = document.createElement("div");
-      div.classList.add("category");
+      div.classList.add("categoría");
       div.addEventListener("click", () => {
-        screenWrapper.classList.toggle("show-category");
-        selectedCategory = category;
-        updateTotals();
-        categoryTitle.innerHTML = category.title;
-        categoryImg.src = `images/${category.img}`;
-        renderTasks();
+        pantallaEnvoltura.classList.toggle("mostrar-categoría");
+        categoríaSeleccionada = categoría;
+        actualizarTotales();
+        títuloCategoría.textContent = categoría.título;
+        imagenCategoría.src = `images/${categoría.img}`;
+        renderizarTareas();
       });
   
       div.innerHTML = `
-                    <div class="left">
-                  <img src="images/${category.img}"
-                   alt="${category.title}"
+                    <div class="izquierda">
+                  <img src="images/${categoría.img}"
+                   alt="${categoría.título}"
                     />
-                  <div class="content">
-                    <h1>${category.title}</h1>
-                    <p>${categoryTasks.length} Tasks</p>
+                  <div class="contenido">
+                    <h1>${categoría.título}</h1>
+                    <p>${tareasCategoría.length} Tareas</p>
                   </div>
                 </div>
-                <div class="options">
-                  <div class="toggle-btn">
+                <div class="opciones">
+                  <div class="botón-de-activación">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -260,36 +260,36 @@ let categories = [
                 </div>
       `;
   
-      categoriesContainer.appendChild(div);
+      contenedorCategorías.appendChild(div);
     });
   };
   
-  const renderTasks = () => {
-    tasksContainer.innerHTML = "";
-    const categoryTasks = tasks.filter(
-      (task) =>
-        task.category.toLowerCase() === selectedCategory.title.toLowerCase()
+  const renderizarTareas = () => {
+    contenedorTareas.innerHTML = "";
+    const tareasCategoría = tareas.filter(
+      (tarea) =>
+        tarea.categoría.toLowerCase() === categoríaSeleccionada.título.toLowerCase()
     );
-    if (categoryTasks.length === 0) {
-      tasksContainer.innerHTML = `<p class="no-tasks">No tasks added for this category</p>`;
+    if (tareasCategoría.length === 0) {
+      contenedorTareas.innerHTML = `<p class="sin-tareas">No se han agregado tareas para esta categoría</p>`;
     } else {
-      categoryTasks.forEach((task) => {
+      tareasCategoría.forEach((tarea) => {
         const div = document.createElement("div");
-        div.classList.add("task-wrapper");
+        div.classList.add("envoltura-de-tarea");
         const label = document.createElement("label");
-        label.classList.add("task");
-        label.setAttribute("for", task.id);
+        label.classList.add("tarea");
+        label.setAttribute("for", tarea.id);
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.id = task.id;
-        checkbox.checked = task.completed;
+        checkbox.id = tarea.id;
+        checkbox.checked = tarea.completada;
         checkbox.addEventListener("change", () => {
-          const index = tasks.findIndex((t) => t.id === task.id);
-          tasks[index].completed = !tasks[index].completed;
-          saveLocal();
+          const índice = tareas.findIndex((t) => t.id === tarea.id);
+          tareas[índice].completada = !tareas[índice].completada;
+          guardarLocal();
         });
         div.innerHTML = `
-        <div class="delete">
+        <div class="borrar">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -307,7 +307,7 @@ let categories = [
                 </div>
                 `;
         label.innerHTML = `
-                <span class="checkmark"
+                <span class="marca-de-verificación"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -323,87 +323,88 @@ let categories = [
                     />
                   </svg>
                 </span>
-                <p>${task.task}</p>
+                <p>${tarea.tarea}</p>
           `;
         label.prepend(checkbox);
         div.prepend(label);
-        tasksContainer.appendChild(div);
+        contenedorTareas.appendChild(div);
   
-        const deleteBtn = div.querySelector(".delete");
-        deleteBtn.addEventListener("click", () => {
-          const index = tasks.findIndex((t) => t.id === task.id);
-          tasks.splice(index, 1);
-          saveLocal();
-          renderTasks();
+        const borrarBtn = div.querySelector(".borrar");
+        borrarBtn.addEventListener("click", () => {
+          const índice = tareas.findIndex((t) => t.id === tarea.id);
+          tareas.splice(índice, 1);
+          guardarLocal();
+          renderizarTareas();
         });
       });
   
-      renderCategories();
-      updateTotals();
+      renderizarCategorías();
+      actualizarTotales();
     }
   };
   
-  const toggleAddTaskForm = () => {
-    addTaskWrapper.classList.toggle("active");
-    blackBackdrop.classList.toggle("active");
-    addTaskBtn.classList.toggle("active");
+  const alternarFormularioAgregarTarea = () => {
+    envolturaAgregarTarea.classList.toggle("activa");
+    fondoNegro.classList.toggle("activa");
+    btnAgregarTarea.classList.toggle("activa");
   };
   
-  const addTask = (e) => {
+  const agregarTarea = (e) => {
     e.preventDefault();
-    const task = taskInput.value;
-    const category = categorySelect.value;
+    const tarea = entradaTarea.value;
+    const categoría = selectCategoría.value;
   
-    if (task === "") {
-      alert("Please enter a task");
+    if (tarea === "") {
+      alert("Por favor ingresa una tarea");
     } else {
-      const newTask = {
-        id: tasks.length + 1,
-        task,
-        category,
-        completed: false,
+      const nuevaTarea = {
+        id: tareas.length + 1,
+        tarea,
+        categoría,
+        completada: false,
       };
-      taskInput.value = "";
-      tasks.push(newTask);
-      saveLocal();
-      toggleAddTaskForm();
-      renderTasks();
+      entradaTarea.value = "";
+      tareas.push(nuevaTarea);
+      guardarLocal();
+      alternarFormularioAgregarTarea();
+      renderizarTareas();
     }
   };
   
-  // Initialize variables and DOM elements
-  let selectedCategory = categories[0];
-  const categoriesContainer = document.querySelector(".categories");
-  const screenWrapper = document.querySelector(".wrapper");
-  const menuBtn = document.querySelector(".menu-btn");
-  const backBtn = document.querySelector(".back-btn");
-  const tasksContainer = document.querySelector(".tasks");
-  const numTasks = document.getElementById("num-tasks");
-  const categoryTitle = document.getElementById("category-title");
-  const categoryImg = document.getElementById("category-img");
-  const categorySelect = document.getElementById("category-select");
-  const addTaskWrapper = document.querySelector(".add-task");
-  const addTaskBtn = document.querySelector(".add-task-btn");
-  const taskInput = document.getElementById("task-input");
-  const blackBackdrop = document.querySelector(".black-backdrop");
-  const addBtn = document.querySelector(".add-btn");
-  const cancelBtn = document.querySelector(".cancel-btn");
-  const totalTasks = document.getElementById("total-tasks");
+  // Inicializar variables y elementos DOM
+  let categoríaSeleccionada = categorías[0];
+  const contenedorCategorías = document.querySelector(".categorías");
+  const pantallaEnvoltura = document.querySelector(".envoltura");
+  const btnMenú = document.querySelector(".btn-de-menú");
+  const btnRegreso = document.querySelector(".btn-de-regreso");
+  const contenedorTareas = document.querySelector(".tareas");
+  const numTareas = document.getElementById("num-tareas");
+  const títuloCategoría = document.getElementById("category-title");
+  const imagenCategoría = document.getElementById("category-img");
+  const selectCategoría = document.getElementById("select-de-categoría");
+  const envolturaAgregarTarea = document.querySelector(".agregar-tarea");
+  const btnAgregarTarea = document.querySelector(".botón-de-agregar-tarea");
+  const entradaTarea = document.getElementById("entrada-de-tarea");
+  const fondoNegro = document.querySelector(".fondo-negro");
+  const btnAgregar = document.querySelector(".botón-agregar");
+  const btnCancelar = document.querySelector(".botón-cancelar");
+  const totalTareas = document.getElementById("total-tareas");
   
-  // Attach event listeners
-  menuBtn.addEventListener("click", toggleScreen);
-  backBtn.addEventListener("click", toggleScreen);
-  addTaskBtn.addEventListener("click", toggleAddTaskForm);
-  blackBackdrop.addEventListener("click", toggleAddTaskForm);
-  addBtn.addEventListener("click", addTask);
-  cancelBtn.addEventListener("click", toggleAddTaskForm);
+  // Adjuntar event listeners
+  btnMenú.addEventListener("click", alternarPantalla);
+  btnRegreso.addEventListener("click", alternarPantalla);
+  btnAgregarTarea.addEventListener("click", alternarFormularioAgregarTarea);
+  fondoNegro.addEventListener("click", alternarFormularioAgregarTarea);
+  btnAgregar.addEventListener("click", agregarTarea);
+  btnCancelar.addEventListener("click", alternarFormularioAgregarTarea);
   
-  // Render initial state
-  getLocal();
-  renderTasks();
-  categories.forEach((category) => {
-    const option = document.createElement("option");
-    option.value = category.title.toLowerCase();
-    option.textContent = category.title;
-    categorySelect.appendChild(option);
+  // Renderizar estado inicial
+  obtenerLocal();
+  renderizarTareas();
+  categorías.forEach((categoría) => {
+    const opción = document.createElement("option");
+    opción.value = categoría.título.toLowerCase();
+    opción.textContent = categoría.título;
+    selectCategoría.appendChild(opción);
   });
+    

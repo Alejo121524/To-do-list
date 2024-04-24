@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,13 +11,14 @@
     <meta name="msapplication-TileColor" content="#2d89ef" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/styleToDoList.css" />
-    <title>To do list</title>
+    <title>Lista de tareas</title>
+  </head>
   <body>
-    <div class="contenedor">
+    <div class="envoltura">
       <div class="fondo-de-pantalla"></div>
-      <div class="inicio-pantalla pantalla">
-        <div class="cabeza-contenedor">
-          <div class="menu-btn">
+      <div class="pantalla-de-inicio pantalla">
+        <div class="cabezal-wrapper">
+          <div class="btn-de-menú">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -33,7 +34,7 @@
               />
             </svg>
           </div>
-          <div class="bienvenido">
+          <div class="bienvenida">
             <div class="contenido">
               <h1>¡HOLA BIENVENIDO!</h1>
               <p>Para hoy tienes <span id="total-tareas">5</span> tareas</p>
@@ -44,9 +45,9 @@
             </div>
           </div>
         </div>
-        <div class="categorias-contenedor">
-          <div class="categorias">
-            <div class="categoria">
+        <div class="envoltura-de-categorías">
+          <div class="categorías">
+            <div class="categoría">
               <div class="izquierda">
                 <img src="images/editar-perfil.png" alt="" />
                 <div class="contenido">
@@ -55,7 +56,7 @@
                 </div>
               </div>
               <div class="opciones">
-                <div class="alternar-btn">
+                <div class="botón-de-activación">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -76,9 +77,9 @@
           </div>
         </div>
       </div>
-      <div class="categoria-pantalla pantalla">
-        <div class="cabeza-contenedor">
-          <div class="atras-btn">
+      <div class="pantalla-de-categoría pantalla">
+        <div class="cabezal-wrapper">
+          <div class="btn-de-regreso">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -111,19 +112,19 @@
             </svg>
           </div>
         </div>
-        <div class="categoria-detalles">
-          <img src="images/64572.png" alt="" id="categoria-img" />
+        <div class="detalles-de-categoría">
+          <img src="images/64572.png" alt="" id="category-img" />
           <div class="detalles">
             <p id="num-tareas"> tareas</p>
-            <h1 id="categoria-titulo">Personal</h1>
+            <h1 id="category-title">Personal</h1>
           </div>
         </div>
-        <div class="tareas-contenedor">
+        <div class="envoltura-de-tareas">
           <div class="tareas">
-            <div class="tarea-contenedor">
+            <div class="envoltura-de-tarea">
               <label for="tarea" class="tarea">
                 <input type="checkbox" name="tarea" id="tarea" />
-                <span class="marcado"
+                <span class="marca-de-verificación"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -141,7 +142,7 @@
                 </span>
                 <p></p>
               </label>
-              <div class="eliminar">
+              <div class="borrar">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -161,7 +162,7 @@
           </div>
         </div>
       </div>
-      <div class="añadir-tarea-btn">
+      <div class="btn-de-agregar-tarea">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -177,21 +178,21 @@
           />
         </svg>
       </div>
-      <div class="negro-fondo"></div>
-      <div class="añadir-tarea">
-        <div class="añadir-tarea-fondo"></div>
+      <div class="fondo-negro"></div>
+      <div class="agregar-tarea">
+        <div class="fondo-de-agregar-tarea"></div>
         <h1 class="encabezado">Agregar Tarea</h1>
-        <div class="entrada-grupo">
-          <label for="tarea-entrada"> Tarea </label>
-          <input type="text" id="tarea-entrada" required />
+        <div class="grupo-de-entrada">
+          <label for="entrada-de-tarea"> Tarea </label>
+          <input type="text" id="entrada-de-tarea" required />
         </div>
-        <div class="entrada-grupo">
-          <label for="category-select"> Categoria </label>
-          <select id="categoria-seleccionada"></select>
+        <div class="grupo-de-entrada">
+          <label for="select-de-categoría"> Categoria </label>
+          <select id="select-de-categoría"></select>
         </div>
-        <div class="btns">
-          <button class="cancelar-btn">Cancelar</button>
-          <button class="añadir-btn">Agregar</button>
+        <div class="botones">
+          <button class="botón-cancelar">Cancelar</button>
+          <button class="botón-agregar">Agregar</button>
         </div>
       </div>
     </div>
