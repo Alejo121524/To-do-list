@@ -10,13 +10,13 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#2d89ef" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="css/style to do list.css" />
+    <link rel="stylesheet" href="css/styleToDoList.css" />
     <title>To do list</title>
   <body>
-    <div class="wrapper">
-      <div class="screen-backdrop"></div>
-      <div class="home-screen screen">
-        <div class="head-wrapper">
+    <div class="contenedor">
+      <div class="fondo-de-pantalla"></div>
+      <div class="inicio-pantalla pantalla">
+        <div class="cabeza-contenedor">
           <div class="menu-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,29 +33,29 @@
               />
             </svg>
           </div>
-          <div class="welcome">
-            <div class="content">
+          <div class="bienvenido">
+            <div class="contenido">
               <h1>¡HOLA BIENVENIDO!</h1>
-              <p>Para hoy tienes <span id="total-tasks">5</span> tareas</p>
+              <p>Para hoy tienes <span id="total-tareas">5</span> tareas</p>
             </div>
             <div class="img">
-              <div class="backdrop"></div>
+              <div class="fondo"></div>
               <img src="images/64572.png" alt="" />
             </div>
           </div>
         </div>
-        <div class="categories-wrapper">
-          <div class="categories">
-            <div class="category">
-              <div class="left">
+        <div class="categorias-contenedor">
+          <div class="categorias">
+            <div class="categoria">
+              <div class="izquierda">
                 <img src="images/editar-perfil.png" alt="" />
-                <div class="content">
+                <div class="contenido">
                   <h1>Personal</h1>
                   <p> 5 tareas</p>
                 </div>
               </div>
-              <div class="options">
-                <div class="toggle-btn">
+              <div class="opciones">
+                <div class="alternar-btn">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -76,9 +76,9 @@
           </div>
         </div>
       </div>
-      <div class="category-screen screen">
-        <div class="head-wrapper">
-          <div class="back-btn">
+      <div class="categoria-pantalla pantalla">
+        <div class="cabeza-contenedor">
+          <div class="atras-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -94,7 +94,7 @@
               />
             </svg>
           </div>
-          <div class="options">
+          <div class="opciones">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -111,19 +111,19 @@
             </svg>
           </div>
         </div>
-        <div class="category-details">
-          <img src="images/64572.png" alt="" id="category-img" />
-          <div class="details">
-            <p id="num-tasks"> tareas</p>
-            <h1 id="category-title">Personal</h1>
+        <div class="categoria-detalles">
+          <img src="images/64572.png" alt="" id="categoria-img" />
+          <div class="detalles">
+            <p id="num-tareas"> tareas</p>
+            <h1 id="categoria-titulo">Personal</h1>
           </div>
         </div>
-        <div class="tasks-wrapper">
-          <div class="tasks">
-            <div class="task-wrapper">
-              <label for="task" class="task">
-                <input type="checkbox" name="task" id="task" />
-                <span class="checkmark"
+        <div class="tareas-contenedor">
+          <div class="tareas">
+            <div class="tarea-contenedor">
+              <label for="tarea" class="tarea">
+                <input type="checkbox" name="tarea" id="tarea" />
+                <span class="marcado"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -141,7 +141,7 @@
                 </span>
                 <p></p>
               </label>
-              <div class="delete">
+              <div class="eliminar">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -161,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="add-task-btn">
+      <div class="añadir-tarea-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -177,25 +177,25 @@
           />
         </svg>
       </div>
-      <div class="black-backdrop"></div>
-      <div class="add-task">
-        <div class="add-task-backdrop"></div>
-        <h1 class="heading">Agregar Tarea</h1>
-        <div class="input-group">
-          <label for="task-input"> Tarea </label>
-          <input type="text" id="task-input" required />
+      <div class="negro-fondo"></div>
+      <div class="añadir-tarea">
+        <div class="añadir-tarea-fondo"></div>
+        <h1 class="encabezado">Agregar Tarea</h1>
+        <div class="entrada-grupo">
+          <label for="tarea-entrada"> Tarea </label>
+          <input type="text" id="tarea-entrada" required />
         </div>
-        <div class="input-group">
+        <div class="entrada-grupo">
           <label for="category-select"> Categoria </label>
-          <select id="category-select"></select>
+          <select id="categoria-seleccionada"></select>
         </div>
         <div class="btns">
-          <button class="cancel-btn">Cancelar</button>
-          <button class="add-btn">Agregar</button>
+          <button class="cancelar-btn">Cancelar</button>
+          <button class="añadir-btn">Agregar</button>
         </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="javascript/appToDoList.js"></script>
   </body>
 </html>
