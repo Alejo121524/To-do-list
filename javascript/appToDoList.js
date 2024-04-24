@@ -1,22 +1,22 @@
 let categories = [
   {
     title: "Personal",
-    img: "boy.png",
+    img: "usuario.png",
   },
   {
-    title: "Work",
+    title: "Trabajo",
     img: "briefcase.png",
   },
   {
-    title: "Shopping",
+    title: "Compras",
     img: "shopping.png",
   },
   {
-    title: "Coding",
+    title: "Código",
     img: "web-design.png",
   },
   {
-    title: "Health",
+    title: "Salud",
     img: "healthcare.png",
   },
   {
@@ -24,11 +24,11 @@ let categories = [
     img: "dumbbell.png",
   },
   {
-    title: "Education",
+    title: "Educación",
     img: "education.png",
   },
   {
-    title: "Finance",
+    title: "Finanzas",
     img: "saving.png",
   },
 ];
@@ -36,56 +36,56 @@ let categories = [
 let tasks = [
   {
     id: 1,
-    task: "Go to market",
-    category: "Shopping",
+    task: "Ir a el supermercado",
+    category: "Compras",
     completed: false,
   },
   {
     id: 2,
-    task: "Read a chapter of a book",
+    task: "Leer un capitulo de un libro",
     category: "Personal",
     completed: false,
   },
   {
     id: 3,
-    task: "Prepare presentation for meeting",
-    category: "Work",
+    task: "Preparar una presentación para meet",
+    category: "Trabajo",
     completed: false,
   },
   {
     id: 4,
-    task: "Complete coding challenge",
-    category: "Coding",
+    task: "Completar un reto de código",
+    category: "Código",
     completed: false,
   },
   {
     id: 5,
-    task: "Take a 30-minute walk",
-    category: "Health",
+    task: "Caminar 30 min ",
+    category: "Salud",
     completed: false,
   },
   {
     id: 6,
-    task: "Do a 20-minute HIIT workout",
+    task: "ir a el gym",
     category: "Fitness",
     completed: false,
   },
   {
     id: 7,
-    task: "Watch an educational video online",
+    task: "Ver videos de programación",
     category: "Education",
     completed: false,
   },
   {
     id: 8,
-    task: "Review monthly budget",
-    category: "Finance",
+    task: "Ahorrar diaramente 20k",
+    category: "Finanzas",
     completed: false,
   },
   {
     id: 9,
-    task: "Buy groceries for the week",
-    category: "Shopping",
+    task: "comprar cervezas para el fin de semana",
+    category: "Compras",
     completed: false,
   },
   {
@@ -97,19 +97,19 @@ let tasks = [
   {
     id: 11,
     task: "Send follow-up emails",
-    category: "Work",
+    category: "Trabajo",
     completed: false,
   },
   {
     id: 12,
     task: "Work on a coding side project",
-    category: "Coding",
+    category: "Código",
     completed: false,
   },
   {
     id: 13,
     task: "Try a new healthy recipe",
-    category: "Health",
+    category: "Salud",
     completed: false,
   },
   {
@@ -121,20 +121,20 @@ let tasks = [
   {
     id: 15,
     task: "Read an article about a new topic",
-    category: "Education",
+    category: "Educación",
     completed: false,
   },
   {
     id: 16,
     task: "Set up automatic bill payments",
-    category: "Finance",
+    category: "Finanzas",
     completed: false,
   },
-  // Additional tasks for each category
+  
   {
     id: 17,
     task: "Buy new clothes",
-    category: "Shopping",
+    category: "Compras",
     completed: false,
   },
   {
@@ -146,19 +146,19 @@ let tasks = [
   {
     id: 19,
     task: "Prepare agenda for team meeting",
-    category: "Work",
+    category: "Trabajo",
     completed: false,
   },
   {
     id: 20,
     task: "Debug a software issue",
-    category: "Coding",
+    category: "Código",
     completed: false,
   },
   {
     id: 21,
     task: "Try a new recipe for lunch",
-    category: "Health",
+    category: "Salud",
     completed: false,
   },
   {
@@ -170,25 +170,26 @@ let tasks = [
   {
     id: 23,
     task: "Learn a new language online",
-    category: "Education",
+    category: "Educación",
     completed: false,
   },
   {
     id: 24,
     task: "Read about history",
-    category: "Education",
+    category: "Educación",
     completed: false,
   },
   {
     id: 25,
     task: "Review investment portfolio",
-    category: "Finance",
+    category: "Finanzas",
     completed: false,
   },
-  // Add more tasks for each category as desired
+  
 ];
 
-// Define functions
+// Definir  las funciones
+
 const saveLocal = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
