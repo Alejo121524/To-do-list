@@ -36,57 +36,56 @@ let categories = [
 let tasks = [
   {
     id: 1,
-    task: "Ir a el supermercado",
-    category: "Compras",
+    task: "Go to market",
+    category: "Shopping",
     completed: false,
   },
   {
     id: 2,
-    task: "Leer un capitulo de un libro",
+    task: "Read a chapter of a book",
     category: "Personal",
     completed: false,
   },
   {
     id: 3,
-    task: "Preparar una presentación para meet",
-    category: "Trabajo",
+    task: "Prepare presentation for meeting",
+    category: "Work",
     completed: false,
   },
   {
     id: 4,
-    task: "Completar un reto de código",
-    category: "Código",
+    task: "Complete coding challenge",
+    category: "Coding",
     completed: false,
   },
   {
     id: 5,
-    task: "Caminar 30 min ",
-    category: "Salud",
+    task: "Take a 30-minute walk",
+    category: "Health",
     completed: false,
   },
   {
     id: 6,
-    task: "ir a el gym",
+    task: "Do a 20-minute HIIT workout",
     category: "Fitness",
     completed: false,
   },
   {
     id: 7,
-    task: "Ver videos de programación",
+    task: "Watch an educational video online",
     category: "Education",
     completed: false,
   },
   {
     id: 8,
-    task: "Ahorrar diaramente 20k",
-    category: "Finanzas",
+    task: "Review monthly budget",
+    category: "Finance",
     completed: false,
   },
-  
   {
     id: 9,
-    task: "comprar cervezas para el fin de semana",
-    category: "Compras",
+    task: "Buy groceries for the week",
+    category: "Shopping",
     completed: false,
   },
   {
@@ -98,19 +97,19 @@ let tasks = [
   {
     id: 11,
     task: "Send follow-up emails",
-    category: "Trabajo",
+    category: "Work",
     completed: false,
   },
   {
     id: 12,
     task: "Work on a coding side project",
-    category: "Código",
+    category: "Coding",
     completed: false,
   },
   {
     id: 13,
     task: "Try a new healthy recipe",
-    category: "Salud",
+    category: "Health",
     completed: false,
   },
   {
@@ -122,20 +121,20 @@ let tasks = [
   {
     id: 15,
     task: "Read an article about a new topic",
-    category: "Educación",
+    category: "Education",
     completed: false,
   },
   {
     id: 16,
     task: "Set up automatic bill payments",
-    category: "Finanzas",
+    category: "Finance",
     completed: false,
   },
-  
+  // Additional tasks for each category
   {
     id: 17,
     task: "Buy new clothes",
-    category: "Compras",
+    category: "Shopping",
     completed: false,
   },
   {
@@ -147,19 +146,19 @@ let tasks = [
   {
     id: 19,
     task: "Prepare agenda for team meeting",
-    category: "Trabajo",
+    category: "Work",
     completed: false,
   },
   {
     id: 20,
     task: "Debug a software issue",
-    category: "Código",
+    category: "Coding",
     completed: false,
   },
   {
     id: 21,
     task: "Try a new recipe for lunch",
-    category: "Salud",
+    category: "Health",
     completed: false,
   },
   {
@@ -171,26 +170,25 @@ let tasks = [
   {
     id: 23,
     task: "Learn a new language online",
-    category: "Educación",
+    category: "Education",
     completed: false,
   },
   {
     id: 24,
     task: "Read about history",
-    category: "Educación",
+    category: "Education",
     completed: false,
   },
   {
     id: 25,
     task: "Review investment portfolio",
-    category: "Finanzas",
-    completed: false,
+    category: "Finance",
+    completed: true,
   },
-  
+  // Add more tasks for each category as desired
 ];
 
-// Definir  las funciones
-
+// Define functions
 const saveLocal = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -273,7 +271,7 @@ const renderTasks = () => {
       task.category.toLowerCase() === selectedCategory.title.toLowerCase()
   );
   if (categoryTasks.length === 0) {
-    tasksContainer.innerHTML = `<p class="no-tasks">No se agregaron tareas para esta categoría</p>`;
+    tasksContainer.innerHTML = `<p class="no-tasks">No tasks added for this category</p>`;
   } else {
     categoryTasks.forEach((task) => {
       const div = document.createElement("div");
