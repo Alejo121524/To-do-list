@@ -82,7 +82,7 @@ let tasks = [
     category: "Finanzas",
     completed: false,
   },
-  /*
+  
   {
     id: 9,
     task: "comprar cervezas para el fin de semana",
@@ -186,7 +186,7 @@ let tasks = [
     category: "Finanzas",
     completed: false,
   },
-  */
+  
 ];
 
 // Definir  las funciones
