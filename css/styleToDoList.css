@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff0000;
+    color: #c30e0e;
     font-family: "Inter", sans-serif;
     background-color: #000000;
 }
@@ -314,12 +314,13 @@ body {
 }
 
 .task-wrapper .delete:hover {
-    color: red;
+    color: rgb(217, 217, 217);
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 .no-tasks {
     margin-top: 5rem;
+    color:#e5e7fd;
     text-align: center;
     font-size: 1.5rem;
     opacity: 0.6;
