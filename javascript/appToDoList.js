@@ -1,3 +1,4 @@
+// Estructura de datos para categorías y tareas
 let categories = [
   {
     title: "Personal",
@@ -37,158 +38,21 @@ let tasks = [
   {
     id: 1,
     task: "Go to market",
-    category: "Shopping",
+    category: "Compras",
     completed: false,
+    date: "2024-05-12"
   },
   {
     id: 2,
     task: "Read a chapter of a book",
     category: "Personal",
     completed: false,
+    date: "2024-05-15"
   },
-  {
-    id: 3,
-    task: "Prepare presentation for meeting",
-    category: "Work",
-    completed: false,
-  },
-  {
-    id: 4,
-    task: "Complete coding challenge",
-    category: "Coding",
-    completed: false,
-  },
-  {
-    id: 5,
-    task: "Take a 30-minute walk",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 6,
-    task: "Do a 20-minute HIIT workout",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 7,
-    task: "Watch an educational video online",
-    category: "Education",
-    completed: false,
-  },
-  {
-    id: 8,
-    task: "Review monthly budget",
-    category: "Finance",
-    completed: false,
-  },
-  {
-    id: 9,
-    task: "Buy groceries for the week",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 10,
-    task: "Write in a journal",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 11,
-    task: "Send follow-up emails",
-    category: "Work",
-    completed: false,
-  },
-  {
-    id: 12,
-    task: "Work on a coding side project",
-    category: "Coding",
-    completed: false,
-  },
-  {
-    id: 13,
-    task: "Try a new healthy recipe",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 14,
-    task: "Attend a yoga class",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 15,
-    task: "Read an article about a new topic",
-    category: "Education",
-    completed: false,
-  },
-  {
-    id: 16,
-    task: "Set up automatic bill payments",
-    category: "Finance",
-    completed: false,
-  },
-  // Additional tasks for each category
-  {
-    id: 17,
-    task: "Buy new clothes",
-    category: "Shopping",
-    completed: false,
-  },
-  {
-    id: 18,
-    task: "Meditate for 10 minutes",
-    category: "Personal",
-    completed: false,
-  },
-  {
-    id: 19,
-    task: "Prepare agenda for team meeting",
-    category: "Work",
-    completed: false,
-  },
-  {
-    id: 20,
-    task: "Debug a software issue",
-    category: "Coding",
-    completed: false,
-  },
-  {
-    id: 21,
-    task: "Try a new recipe for lunch",
-    category: "Health",
-    completed: false,
-  },
-  {
-    id: 22,
-    task: "Go for a run",
-    category: "Fitness",
-    completed: false,
-  },
-  {
-    id: 23,
-    task: "Learn a new language online",
-    category: "Education",
-    completed: false,
-  },
-  {
-    id: 24,
-    task: "Read about history",
-    category: "Education",
-    completed: false,
-  },
-  {
-    id: 25,
-    task: "Review investment portfolio",
-    category: "Finance",
-    completed: true,
-  },
-
+  // Resto de las tareas...
 ];
 
-// Inicializar las variables en el dom 
+
 let selectedCategory = categories[0];
 const categoriesContainer = document.querySelector(".categories");
 const screenWrapper = document.querySelector(".wrapper");
@@ -202,12 +66,14 @@ const categorySelect = document.getElementById("category-select");
 const addTaskWrapper = document.querySelector(".add-task");
 const addTaskBtn = document.querySelector(".add-task-btn");
 const taskInput = document.getElementById("task-input");
+const taskDateInput = document.getElementById("task-date-input"); // Nuevo elemento para la fecha de la tarea
 const blackBackdrop = document.querySelector(".black-backdrop");
 const addBtn = document.querySelector(".add-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
 const totalTasks = document.getElementById("total-tasks");
 
-// Define funciones
+
+// Funciones auxiliares para el manejo de datos
 const saveLocal = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
@@ -219,13 +85,14 @@ const getLocal = () => {
   }
 };
 
+// Funciones para actualizar la interfaz de usuario
 const toggleScreen = () => {
   screenWrapper.classList.toggle("show-category");
 };
-const updateTotals = () => {
-  let totalTasksCount = 0; // Inicializar el contador total de tareas
 
-  // Iterar sobre todas las tareas y contarlas
+const updateTotals = () => {
+  let totalTasksCount = 0;
+
   categories.forEach((category) => {
     const categoryTasks = tasks.filter(
       (task) => task.category.toLowerCase() === category.title.toLowerCase()
@@ -236,6 +103,46 @@ const updateTotals = () => {
   numTasks.innerHTML = `${totalTasksCount} Tareas`;
   totalTasks.innerHTML = totalTasksCount;
 };
+
+const addTask = (e) => {
+  e.preventDefault();
+  
+  // Verificar si se hizo clic en el botón de agregar tarea
+  if (e.target.classList.contains("add-btn")) {
+    const task = taskInput.value.trim();
+    const category = categorySelect.value;
+    const date = taskDateInput.value;
+
+    if (task === "") {
+      alert("Por favor, ingresa una tarea válida.");
+    } else {
+      const newTask = {
+        id: tasks.length + 1,
+        task,
+        category,
+        date,
+        completed: false,
+      };
+      taskInput.value = "";
+      // Establecer la fecha actual en el campo de fecha
+      taskDateInput.value = new Date().toISOString().split('T')[0];
+      tasks.push(newTask);
+      saveLocal();
+      renderTasks();
+      updateTotals();
+      renderCategories();
+      toggleAddTaskForm();
+    }
+  }
+};
+// Asignar evento click al botón de agregar
+addBtn.addEventListener("click", addTask);
+
+
+// Asignar evento click al botón de agregar
+addTaskBtn.addEventListener("click", addTask);
+
+
 
 const renderCategories = () => {
   categoriesContainer.innerHTML = "";
@@ -251,7 +158,7 @@ const renderCategories = () => {
       updateTotals();
       categoryTitle.innerHTML = category.title;
       categoryImg.src = `images/${category.img}`;
-      renderTasks(); // Renderiza las tareas específicas de la categoría seleccionada
+      renderTasks();
     });
 
     div.innerHTML = `
@@ -259,7 +166,7 @@ const renderCategories = () => {
         <img src="images/${category.img}" alt="${category.title}" />
         <div class="content">
           <h1>${category.title}</h1>
-          <p>${categoryTasks.length} Tareas</p> <!-- Mostrar el número de tareas de esta categoría -->
+          <p>${categoryTasks.length} Tareas</p>
         </div>
       </div>
       <div class="options">
@@ -284,7 +191,10 @@ const renderCategories = () => {
 
     categoriesContainer.appendChild(div);
   });
-};const renderTasks = () => {
+};
+
+
+const renderTasks = () => {
   tasksContainer.innerHTML = "";
   const categoryTasks = tasks.filter(
     (task) =>
@@ -308,7 +218,7 @@ const renderCategories = () => {
         tasks[index].completed = !tasks[index].completed;
         saveLocal();
         updateTotals();
-        renderTasks(); //actualizar tareas despues de cambiar el estado de tareas
+        renderTasks();
       });
       div.innerHTML = `
         <div class="delete">
@@ -323,7 +233,7 @@ const renderCategories = () => {
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m-12 0a48.108 48.108 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
             />
           </svg>
         </div>
@@ -346,6 +256,7 @@ const renderCategories = () => {
           </svg>
         </span>
         <p>${task.task}</p>
+        <input type="date" class="task-date" value="${task.date}" disabled> <!-- Fecha de tarea deshabilitada -->
       `;
       label.prepend(checkbox);
       div.prepend(label);
@@ -358,11 +269,23 @@ const renderCategories = () => {
         saveLocal();
         renderTasks();
         updateTotals();
-        renderCategories(); //  actualizar categorias despues de eliminar una tarea
+        renderCategories();
+        
       });
+
+      // Calcular días restantes hasta la fecha límite y mostrarlo junto a la tarea
+      const dateInput = div.querySelector(".task-date");
+      const today = new Date();
+      const dueDate = new Date(task.date);
+      const timeDiff = dueDate.getTime() - today.getTime();
+      const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+      const daysRemaining = daysDiff >= 0 ? `${daysDiff} días restantes` : "¡Tarea vencida!";
+      const daysRemainingElement = document.createElement("span");
+      daysRemainingElement.classList.add("days-remaining");
+      daysRemainingElement.textContent = daysRemaining;
+      div.appendChild(daysRemainingElement);
     });
 
-    // Agregue el total de tareas para la categoría seleccionada
     const totalTasksElement = document.createElement("div");
     totalTasksElement.classList.add("total-tasks");
     totalTasksElement.innerHTML = `<p>Total de Tareas: ${categoryTasks.length}</p>`;
@@ -370,39 +293,22 @@ const renderCategories = () => {
   }
 
   updateTotals();
+  
 };
 
 const toggleAddTaskForm = () => {
   addTaskWrapper.classList.toggle("active");
   blackBackdrop.classList.toggle("active");
   addTaskBtn.classList.toggle("active");
-};
-
-const addTask = (e) => {
-  e.preventDefault();
-  const task = taskInput.value;
-  const category = categorySelect.value;
-
-  if (task === "") {
-    alert("Please enter a task");
-  } else {
-    const newTask = {
-      id: tasks.length + 1,
-      task,
-      category,
-      completed: false,
-    };
-    taskInput.value = "";
-    tasks.push(newTask);
-    saveLocal();
-    renderTasks();
-    updateTotals(); // Actualizar los totales después de agregar una nueva tarea
-    renderCategories(); // Renderizar categorías nuevamente para reflejar el cambio en el conteo de tareas
-  }
+  
+  // Obtener la categoría actualmente seleccionada
+  const selectedCategoryValue = selectedCategory.title.toLowerCase();
+  
+  // Establecer el valor del campo de categoría en el formulario
+  categorySelect.value = selectedCategoryValue;
 };
 
 
-// Attach event listeners
 menuBtn.addEventListener("click", toggleScreen);
 backBtn.addEventListener("click", toggleScreen);
 addTaskBtn.addEventListener("click", toggleAddTaskForm);
@@ -410,13 +316,21 @@ blackBackdrop.addEventListener("click", toggleAddTaskForm);
 addBtn.addEventListener("click", addTask);
 cancelBtn.addEventListener("click", toggleAddTaskForm);
 
+
 // Render initial state
 getLocal();
-renderCategories(); // Renderiza las categorías al cargar la página
+renderCategories();
 renderTasks();
+
+// Limpiar el campo de categoría
+categorySelect.innerHTML = "";
+
 categories.forEach((category) => {
   const option = document.createElement("option");
   option.value = category.title.toLowerCase();
   option.textContent = category.title;
   categorySelect.appendChild(option);
 });
+
+// Establecer el valor del campo de categoría en blanco
+categorySelect.value = "";

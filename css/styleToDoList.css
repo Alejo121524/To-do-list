@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #c30e0e;
+    color: #0033ff;
     font-family: "Inter", sans-serif;
     background-color: #000000;
 }
@@ -52,7 +52,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0 0 50% 50%;
-    background-color: #ffff00;
+    background-color: #ff0033;
     z-index: -1;
     transition: all 0.3s;
 }
@@ -76,7 +76,7 @@ body {
 .menu-btn {
     width: 2rem;
     cursor: pointer;
-    color: #ffffff;
+    color: #f6f6f6;
 }
 
 .welcome {
@@ -198,7 +198,7 @@ body {
 .category-screen .head-wrapper svg {
     width: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: #5e02ff;
 }
 
 .category-details {
@@ -338,7 +338,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #39a6f0;
+    background-color: #2f00ff; /* Naranja brillante */
     transition: all 0.3s;
 }
 
@@ -354,7 +354,7 @@ body {
 
 .add-task-btn svg {
     width: 2rem;
-    color: #fff;
+    color: #ffffff; /* Color blanco */
 }
 
 .add-task {
@@ -389,7 +389,7 @@ body {
 .input-group input,
 .input-group select {
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #f3d5d5;
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
@@ -430,12 +430,12 @@ button.add-btn {
 .add-task-backdrop {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 135%;
-    height: 20rem;
+    left: 55%;
+    transform: translateX(-55%);
+    width: 130%;
+    height: 22.5rem;
     border-radius: 50% 50% 0 0;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .black-backdrop {
